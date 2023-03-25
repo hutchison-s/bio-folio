@@ -305,7 +305,7 @@ footer a:hover {
 --------------------------------------------------------
 */ 
 
-@media screen and (max-width: 1000px) and (min-height: 600px) {
+@media screen and (max-width: 1000px) and (min-height: 450px) {
     main {
         flex-direction: column;
         min-height: calc(100vh - 33px);
@@ -452,9 +452,12 @@ footer a:hover {
     header p {
         font-size: 0.9em;
     }
+    #home article p {
+        font-size: 14px;
+    }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 450px) {
     main {
         overflow-x: initial;
         overflow-y: scroll;
