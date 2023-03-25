@@ -1,0 +1,523 @@
+
+/*
+--------------------------------------------------------
+        GLOBAL STYLES
+--------------------------------------------------------
+*/ 
+
+:root {
+    --non-photo-blue: rgb(115, 210, 222);
+    --xanthous: rgb(255, 188, 66);
+    --quinacridone-magenta: rgb(143, 45, 86);
+    --dark-magenta: rgb(78, 24, 47);
+    --charcoal: rgb(53, 83, 101);
+    --gunmetal: rgb(18, 32, 42);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    overflow: hidden;
+    background: var(--gunmetal);
+}
+
+main {
+    display: flex;
+    width: 100vw;
+}
+.hideThis {
+    display: none;
+}
+.hideThis * {
+    display: none;
+}
+
+/*
+--------------------------------------------------------
+        TAB STYLES
+--------------------------------------------------------
+*/ 
+
+.div {
+    flex: 0 0 55px;
+    position: relative;
+    height: 100vh;
+    border-left: 3px solid var(--non-photo-blue);
+    background-image: linear-gradient(rgb(23, 42, 55), rgb(13, 22, 28));
+    overflow-x: hidden;
+    transition: flex 0.6s ease-out;
+}
+.primaryTab {
+    flex: 1 1 55px;
+    background-image: linear-gradient(var(--charcoal), var(--gunmetal));
+}
+.divLbl {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: translateY(-50%);
+    background: var(--non-photo-blue);
+    color: var(--gunmetal);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 20px 10px;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin: 0 0 -10px 0;
+}
+.divLbl:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+.primaryTab .divLbl:hover {
+    color: var(--gunmetal);
+    cursor: default;
+}
+.content-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: top;
+    gap: 20px;
+    padding: 20px 10vw;
+}
+.content-wrap ul, .information {
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 20px 2px rgba(128, 128, 128, 0.3);
+    padding: 25px;
+    margin-top: 20px;
+    width: 30vw;
+    height: 50vh;
+}
+
+/*
+--------------------------------------------------------
+        HEADER
+--------------------------------------------------------
+*/ 
+
+header {
+    background-image: 
+        linear-gradient(
+            to top left,
+            rgb(63, 17, 37), 
+            rgb(143, 45, 86));
+    border-bottom: 4px double rgb(255, 188, 66);
+    display: flex;
+    overflow-x: hidden;
+}
+header h1 {
+    font-size: 72px;
+    margin: 0;
+    padding-bottom: 2vh;
+    line-height: 1;
+    color: #ffffff;
+    border-bottom: 4px dotted rgba(255, 188, 66, 0.7);
+}
+.header-text {
+    padding-left: 50px;
+    margin-top: 4vh;
+}
+header p {
+    font-style: italic;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/*
+--------------------------------------------------------
+        HOME PAGE
+--------------------------------------------------------
+*/ 
+
+#home .content-wrap {
+    margin-top: 50px;
+    justify-content:space-around;
+    grid-template-columns: 25vw 40vw;
+}
+#home .content-wrap img {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(13, 22, 28, 0.5);
+    margin: 20px auto;
+}
+#home .content-wrap article {
+    color: #ffffff;
+    line-height: 1.8;
+    max-height: 450px;
+    overflow-y: hidden;
+    padding: 20px;
+}
+#home h2 {
+    font-size: 36px;
+}
+#home article p {
+    font-size: 20px;
+}
+/*
+--------------------------------------------------------
+        WORK EXPERIENCE
+--------------------------------------------------------
+*/ 
+
+#workexp ul {
+    list-style-type: none;
+}
+#workexp li {
+    background: rgba(18, 32, 42, 0.9);
+    color: rgb(115, 210, 222);
+    text-align: center;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 
+        0 0 10px rgba(13, 22, 28, 0.5) inset,
+        0 5px 20px 2px rgba(0, 0, 0, 0.3);
+}
+#workexp li.active-list-item {
+    color:rgb(23, 42, 55);
+    background: #ffffff;
+}
+.job-description {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+}
+.job-description h2 {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.job-description dt {
+    font-weight: bold;
+    font-size: larger;
+    text-decoration: underline solid 2px;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/*
+--------------------------------------------------------
+        EDUCATION
+--------------------------------------------------------
+*/ 
+
+.degree {
+    height: 25vh;
+    position: relative;
+    text-align: center;
+    margin: 10px auto;
+    width: 30vw;
+    min-width: 25vh;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 25px;
+    box-shadow: 
+        0 0 10px rgba(13, 22, 28, 0.3) inset,
+        0 5px 20px 2px rgba(0, 0, 0, 0.3);
+}
+.degree:nth-child(3) {
+    background: #0051ba;
+}
+.degree img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.degree-info {
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background: rgba(13, 22, 28, 0.95);
+    border-radius: inherit;
+    z-index: 2;
+    color: #ffffff;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.degree-info p {
+    margin: 4px auto;
+}
+.degree-info h2 {
+    margin: 1vw auto;
+}
+.degree-info:hover, .degree-info:active {
+    opacity: 1;
+}
+
+/*
+--------------------------------------------------------
+        PROJECTS
+--------------------------------------------------------
+*/ 
+
+/*
+--------------------------------------------------------
+        FOOTER
+--------------------------------------------------------
+*/ 
+
+footer {
+    height: 35px;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    text-align: center;
+    background: rgb(78, 24, 47);
+    border-left: solid 2px rgb(115, 210, 222);
+    border-right: solid 2px rgb(115, 210, 222);
+    border-top: 1px solid rgb(255, 188, 66);
+    text-align: center;
+    z-index: 3;
+}
+footer ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    justify-content: center;
+    width: 70vw;
+    
+}
+footer ul li {
+    margin-top: 8px;
+    flex: 1;
+}
+footer a {
+    text-decoration: none;
+    padding: 5px 20px;
+    color:#ffffff;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+footer a:hover {
+    background:rgb(143, 45, 86);
+    color:rgb(115, 210, 222);
+}
+
+/*
+--------------------------------------------------------
+        RESPONSIVE STYLING
+--------------------------------------------------------
+*/ 
+
+@media screen and (max-width: 1000px) and (min-height: 600px) {
+    main {
+        flex-direction: column;
+        min-height: calc(100vh - 33px);
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .div {
+        width: 100vw;
+        flex: 0 0 45px;
+        border-top: 3px solid var(--non-photo-blue);
+        border-left: none;
+        background-image: linear-gradient(to right, rgb(23, 42, 55), rgb(13, 22, 28));
+        overflow-y: scroll;
+        transition: flex 0.6s ease-out;
+    }
+    .primaryTab {
+        flex: 1 1 45px;
+        background-image: linear-gradient(var(--charcoal), var(--gunmetal));
+    }
+    .divLbl {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        writing-mode:initial;
+        text-orientation: initial;
+        transform: translateX(-50%);
+        background: var(--non-photo-blue);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 5px 30px;
+        font-size: 20px;
+        line-height: 1;
+        margin: 0;
+    }
+    .content-wrap {
+        display: block;
+        gap: 10px;
+        padding: 0;
+    }
+    .content-wrap ul, .information {
+        padding: 15px;
+        margin: 10px auto;
+        width: 80vw;
+        height: auto;
+    }
+    header {
+        background-image: 
+            linear-gradient(
+                to top left,
+                rgb(63, 17, 37), 
+                rgb(143, 45, 86));
+        border-bottom: 4px double rgb(255, 188, 66);
+        display: flex;
+        width: 100vw;
+        padding: 30px 5px 5px;
+        overflow: initial;
+    }
+    header h1 {
+        font-size: 60px;
+        padding-bottom: 1vh;
+    }
+    .header-text {
+        padding: 15px;
+        margin: 0;
+    }
+    header p {
+        font-size: 1.2em;
+    }
+    header img {
+        height: 25vw;
+        width: 25vw;
+        margin: 10px 0;
+    }
+    #home .content-wrap img {
+        transform: scale(0.8);
+        margin: 0 auto;
+    }
+    #home .content-wrap {
+        margin-top: 0;
+        text-align: center;
+    }
+    #home article {
+        margin-top: -40px;
+        text-align: left;
+    }
+    #workexp li {
+        font-size: 14px;
+        padding: 8px 20px;
+        margin: 10px auto;
+    }
+    .degree {
+        height: 16vh;
+        width: 80vw;
+        min-width: initial;
+    }
+    .degree img {
+        transform: translateY(-50%) scale(0.5);
+    }
+    .degree-info {
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        right: 2px;
+        padding: 10px;
+        font-size: smaller;
+    }
+    #linkedin p {
+        display: inline;
+        margin: 20px 10px;
+        padding-top: 10px;
+    }
+    #linkedin h2 {
+        margin: 10px;
+    }
+    #proj .content-wrap {
+        text-align: center;
+    }
+    iframe {
+        width: 80vw;
+        height: 60vh;
+        margin: 10px 0;
+    }
+    footer {
+        border-left: none;
+        border-right: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .div {
+        flex: 0 0 35px;
+    }
+    .primaryTab {
+        flex: 1 1 35px;
+    }
+    .divLbl {
+        font-size: 14px;
+    }
+    header h1 {
+        font-size: 20px;
+        padding-bottom: 1vh;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    main {
+        overflow-x: initial;
+        overflow-y: scroll;
+    }
+    .div {
+        flex: 0 0 35px;
+        width: 100vw;
+    }
+    .primaryTab {
+        flex: 1 1 35px;
+    }
+    .divLbl {
+        font-size: 14px;
+    }
+    header {
+        width: 100vw;
+        padding-left: 10px;
+    }
+    .header-text {
+        padding: 15px;
+        margin: 0;
+    }
+    header img {
+        height: 25vh;
+        width: 25vh;
+        margin: 10px 0;
+    }
+    header h1 {
+        font-size: 24px;
+    }
+    header p {
+        font-size: 0.9em;
+    }
+    .content-wrap ul, .information {
+        padding: 15px;
+        margin: 10px auto;
+        width: 30vw;
+        height: auto;
+        font-size: smaller;
+    }
+    .degree {
+        height: 40vh;
+        width: 35vw;
+        min-width: initial;
+    }
+    .degree img {
+        transform: translateY(-50%) scale(0.3);
+    }
+    .degree-info {
+        top: 2px;
+        bottom: 2px;
+        left: 2px;
+        right: 2px;
+        padding: 10px;
+        font-size: smaller;
+    }
+    #linkedin p {
+        display: inline;
+        margin: 20px 10px;
+        padding-top: 10px;
+        line-height: 1.5;
+    }
+    #linkedin h2 {
+        margin: 10px;
+    }
+}
