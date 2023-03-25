@@ -1,7 +1,7 @@
 const main = document.querySelector("main");
-const tabs = Array.from(document.querySelectorAll(".div"));
+const tabs = Array.from(document.querySelectorAll(".tab"));
 const hideables = Array.from(document.querySelectorAll(".hideable"));
-const labels = Array.from(document.querySelectorAll(".divLbl"));
+const labels = Array.from(document.querySelectorAll(".tabLabel"));
 const jobs = Array.from(document.querySelectorAll("#workexp .content-wrap li"));
 const jobDescriptions = Array.from(document.querySelectorAll(".job-description"));
 let currentTab = document.querySelector("#home");

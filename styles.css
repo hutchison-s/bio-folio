@@ -17,7 +17,6 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    overflow: hidden;
     background: var(--gunmetal);
 }
 
@@ -38,7 +37,7 @@ main {
 --------------------------------------------------------
 */ 
 
-.div {
+.tab {
     flex: 0 0 55px;
     position: relative;
     height: 100vh;
@@ -51,7 +50,7 @@ main {
     flex: 1 1 55px;
     background-image: linear-gradient(var(--charcoal), var(--gunmetal));
 }
-.divLbl {
+.tabLabel {
     position: absolute;
     left: 0;
     top: 50%;
@@ -67,11 +66,11 @@ main {
     line-height: 1;
     margin: 0 0 -10px 0;
 }
-.divLbl:hover {
+.tabLabel:hover {
     color: #ffffff;
     cursor: pointer;
 }
-.primaryTab .divLbl:hover {
+.primaryTab .tabLabel:hover {
     color: var(--gunmetal);
     cursor: default;
 }
@@ -312,7 +311,7 @@ footer a:hover {
         overflow-y: scroll;
         overflow-x: hidden;
     }
-    .div {
+    .tab {
         width: 100vw;
         flex: 0 0 45px;
         border-top: 3px solid var(--non-photo-blue);
@@ -325,7 +324,7 @@ footer a:hover {
         flex: 1 1 45px;
         background-image: linear-gradient(var(--charcoal), var(--gunmetal));
     }
-    .divLbl {
+    .tabLabel {
         position: absolute;
         top: 0;
         left: 50%;
@@ -436,13 +435,13 @@ footer a:hover {
 }
 
 @media screen and (max-width: 500px) {
-    .div {
+    .tab {
         flex: 0 0 35px;
     }
     .primaryTab {
         flex: 1 1 35px;
     }
-    .divLbl {
+    .tabLabel {
         font-size: 14px;
     }
     header h1 {
@@ -455,21 +454,21 @@ footer a:hover {
     #home article p {
         font-size: 14px;
     }
-}
+}f
 
 @media screen and (max-height: 450px) {
     main {
         overflow-x: initial;
         overflow-y: scroll;
     }
-    .div {
+    .tab {
         flex: 0 0 35px;
         width: 100vw;
     }
     .primaryTab {
         flex: 1 1 35px;
     }
-    .divLbl {
+    .tabLabel {
         font-size: 14px;
     }
     header {
